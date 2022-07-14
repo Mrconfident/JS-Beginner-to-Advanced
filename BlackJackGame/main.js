@@ -1,15 +1,22 @@
-
 let cards = []
 
 let sum
 
 let sumel = document.getElementById('sum-el')
 let cardel = document.getElementById('card-el')
+let playerEl = document.getElementById('player-id')
+let msg = document.getElementById('message-el')
+
 
 let isAlive = true
 let hasBlackJack = false
 
-const msg = document.getElementById('message-el')
+let player = {
+  name: 'Tarun',
+  chips: 200
+}
+
+playerEl.innerText = player.name + ": $" + player.chips
 
 function getRandom() {
   const x = Math.floor(Math.random()*13) + 1
@@ -44,5 +51,14 @@ function renderGame() {
   } else {
     msg.innerText = 'You Lose'
     isAlive = false
+  }
+}
+
+function newCard () {
+  if (isAlive && !hasBlackJack) {
+    let newCard = getRandom()
+    sum += newCard
+    cards.push(newCard)
+    renderGame()
   }
 }
