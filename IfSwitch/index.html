@@ -1,0 +1,59 @@
+<script>
+  function isLeapyear(year) {
+    if (year % 4 === 0 && (year % 100 !=0 || year % 400 == 0)) {
+      return true
+    } else {
+      return false
+    }
+  }
+  hour = 3
+  if (hour < 18) {
+    greeting = "Good day";
+    console.log(greeting)
+  }
+
+  if(-1) {
+    console.log(window)
+    console.log(document)
+  }
+
+  let year = prompt('Enter Year to check Leap year')
+  alert(isLeapyear(year))
+
+
+  // switch(expression) {
+  //   case x:
+  //     // code block
+  //     break;
+  //   case y:
+  //     // code block
+  //     break;
+  //   default:
+  //     // code block
+  // }
+
+  
+  switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+document.write(day)
+</script>
