@@ -1,0 +1,43 @@
+<script>
+
+  console.log(Date())
+  let firstStr = 'abcd'
+  console.log(typeof firstStr)
+
+  // length property
+  let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let length = txt.length;
+  console.log(length)
+
+  // slice Property
+  let str = "Apple, Banana, Kiwi";
+  let ans = str.slice(7, 13); // slice(start, end) :- starts from start to end(not included)
+  console.log(ans)
+
+  // what if the starting and ending positions are negative
+
+  let res = str.slice(-8, -4)
+  console.log(res)
+
+  // what if we have only one param inside slice(x)
+  // Try?
+  console.log(str.slice(3)) 
+
+  str.substring(1, 12)
+  console.log(str)
+  console.log(str.substring(12, 1))
+
+  let substrign = str.substr(-7,7)
+  console.log(substrign)
+
+
+  let replaceText = 'Welcome to Quinbay ! Happy Coding in Quinbay'
+  let newReplacedText = replaceText.replace(/QuInbay/ig, 'Amazon') // returns new String 
+  console.log(replaceText)
+  console.log(newReplacedText)
+
+  let caseSens = 'MrConfident'
+  console.log(caseSens.toLowerCase())
+
+  // trim ()
+</script>
