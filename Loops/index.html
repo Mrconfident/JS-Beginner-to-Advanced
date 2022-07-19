@@ -1,0 +1,64 @@
+<script>
+  // printing table of 2
+  for(let i = 1; i <= 10 ;i++) {
+    console.log(`2 ${i}'s are ${2*i}`)
+  }
+
+  // Using a for loop output the elements in reverse order
+
+let arr = [43, "what", 9, true, "cannot", false, "be", 3, true];
+// Example output:
+// true 3.5 be false cannot true 9 what 43 OR each item on a new line
+for(let i=arr.length - 1;i >= 0; i--) {
+  console.log(arr[i])
+}
+
+// FOR/IN Loop
+
+// --used to loop through object properties
+
+let school = {
+  name: 'Army',
+  medium: 'English',
+  center: 10
+}
+
+for(x in school) {
+  console.log(x) // objects keys
+  console.log(school[x]) // object values
+}
+
+
+// For OF Loop
+
+// -- for of:  loops through the values of an iterables.
+//  Js Iterables : String, Array etc
+var i
+for(i of 'India') {
+  console.log(i)
+}
+
+const a = [1, 2, 3, 4, 5]
+for(i of a) {
+  console.log(i)
+}
+
+// while loop
+var i
+while (i < 10) {
+  // text += "The number is " + i;
+  i++;
+}
+
+// do while 
+// --always run atleast ones
+let p = -2
+do {
+  console.log(p)
+  p--
+} while(p > 0) {
+}
+
+
+
+</script>
