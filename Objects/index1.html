@@ -1,161 +1,187 @@
 <script>
-//   let user = {
-//     name: 'tarun',
-//     email: 't@gmail.com',
-//     location: 'Bnglr',
-//     blogs: [1,2,4],
-//     login: function () {
-//       console.log('LoggedIn')
-//     },
-//     details: function () {
-//       console.log(user)
-//     },
-//     checkThis: function () {
-//       console.log(this)
-//     },
-//     getName: function () {
-//       console.log(this.name)
-//     },
-//     rollNo: 43
-//   }
-// //   user = {
-// //   login() { // same as "login: function(){...}"
-// //     alert("Hello");
+// //   let user = {
+// //     name: 'tarun',
+// //     email: 't@gmail.com',
+// //     location: 'Bnglr',
+// //     blogs: [1,2,4],
+// //     login: function () {
+// //       console.log('LoggedIn')
+// //     },
+// //     details: function () {
+// //       console.log(user)
+// //     },
+// //     checkThis: function () {
+// //       console.log(this)
+// //     },
+// //     getName: function () {
+// //       console.log(this.name)
+// //     },
+// //     rollNo: 43
 // //   }
-// user.check = function () {
-//   console.log(this)
-// }
-// user.rCheck = () => {
-//   console.log(this)
-// }
-// user.check()
-// user.rCheck()
+// // //   user = {
+// // //   login() { // same as "login: function(){...}"
+// // //     alert("Hello");
+// // //   }
+// // user.check = function () {
+// //   console.log(this)
+// // }
+// // user.rCheck = () => {
+// //   console.log(this)
+// // }
+// // user.check()
+// // user.rCheck()
 
-// The value of this is evaluated during the run-time, depending on the context.
+// // The value of this is evaluated during the run-time, depending on the context.
+// // };
+//   // user.login()
+//   // user.details()
+//   // user.checkThis()
+//   // user.getName()
+
+
+//   // shallow copy and deep copy
+//   // const car = {
+//   //   name: 'Ford',
+//   //   color: 'red',
+//   //   type: 'SUV',
+//   //   variant: 1222
+//   // }
+
+//   // delete car.variant
+//   // console.log(car)
+
+//   // const vehicle = car  // shallow copy ,not good
+
+//   // console.log(vehicle)
+//   // console.log(car)
+
+//   // vehicle.name = 'Mustang'
+//   // console.log(vehicle)
+//   // console.log(car)
+
+//   // console.log(JSON.stringify(car))
+//   // const veh = JSON.parse(JSON.stringify(car)) // deep copy
+
+//   // veh.name = 'Range Rover'
+//   // console.log(veh)
+//   // console.log(car)
+
+
+// //   Write the code, one line for each action:
+
+// // Create an empty object user.
+// // Add the property name with the value John.
+// // Add the property surname with the value Smith.
+// // Change the value of the name to Pete.
+// // Remove the property name from the object.
+
+// //Here the function makeUser returns an object.
+// //What is the result of accessing its ref? Why?
+
+// // function makeUser() {
+// //   return {
+// //     name: "John",
+// //     ref: this
+// //   };
+// // }
+
+// // let user11 = makeUser();
+
+// // console.log( user11.ref.name );
+
+// // const x = {};
+
+// // x.foo = 'bar';
+
+// // console.log(x); // {foo : 'bar'} // because we are not reassigning the object itself
+
+// // x.foo = 'bar2';
+
+// // console.log(x);
+
+// // x = {foo: 'bar'}; this is reassignment
+
+// // Cloning and merging
+
+// const main = {
+//   name: "John",
+//   age: 30
+// }
+
+// let clone = {};
+
+// for(let x in main) {
+//   clone[x] = main[x]
+// }
+
+// console.log(clone)
+// clone.name = 'Tarun'
+
+// console.log(clone)
+// console.log(main)
+
+// // Object.assign
+// // Object.assign(targetObject, srcObject1, srcObject2, .....) syntax
+
+// const assign = {
+// }
+
+// const assign2 = {
+//   color: 'red',
+//   mobile: 'Iphone'
+// }
+
+// const assign3 = {
+//   ram: '2GB',
+//   rom: '16GB'
+// }
+
+// Object.assign(assign, assign2, assign3)
+// assign.color = 'Blue'
+// console.log(assign)
+// console.log(assign2)
+
+// // if copied object property is there in the target , then its get OverWrittened
+
+// // Optional Chaining
+
+// // The optional chaining ?. stops the evaluation if the value before ?. is undefined or null and returns undefined.
+
+// let key = "firstName";
+
+// let user1 = {
+//   firstName: "John"
 // };
-  // user.login()
-  // user.details()
-  // user.checkThis()
-  // user.getName()
+
+// let user2 = null;
+
+// alert( user1?.[key] ); // John
+// alert( user2?.[key] ); // undefined
 
 
-  // shallow copy and deep copy
-  // const car = {
-  //   name: 'Ford',
-  //   color: 'red',
-  //   type: 'SUV',
-  //   variant: 1222
-  // }
+// // Destructuring the Objects
+// const obj = { a: 1, b: 2 };
+// const { a, b } = obj;
+// // is equivalent to:
+// // const a = obj.a;
+// // const b = obj.b;
 
-  // delete car.variant
-  // console.log(car)
+// console.log(a)
+// console.log(b)
+// console.log(obj.a)
+// console.log(obj.b)
 
-  // const vehicle = car  // shallow copy ,not good
-
-  // console.log(vehicle)
-  // console.log(car)
-
-  // vehicle.name = 'Mustang'
-  // console.log(vehicle)
-  // console.log(car)
-
-  // console.log(JSON.stringify(car))
-  // const veh = JSON.parse(JSON.stringify(car)) // deep copy
-
-  // veh.name = 'Range Rover'
-  // console.log(veh)
-  // console.log(car)
+// Default Values while Destructuring
+// const [a = 1] = []; // a is 1
+// const { b = 2 } = { b: undefined }; // b is 2
+// const { c = 2 } = { c: null }; // c is null
 
 
-//   Write the code, one line for each action:
+// Rest property: will store all remaining properties of the object or array into a new object or array.
+// const { kv, ...others } = { a: 1, b: 2, c: 3 };
+// console.log(others); // { b: 2, c: 3 }
 
-// Create an empty object user.
-// Add the property name with the value John.
-// Add the property surname with the value Smith.
-// Change the value of the name to Pete.
-// Remove the property name from the object.
-
-//Here the function makeUser returns an object.
-//What is the result of accessing its ref? Why?
-
-// function makeUser() {
-//   return {
-//     name: "John",
-//     ref: this
-//   };
-// }
-
-// let user11 = makeUser();
-
-// console.log( user11.ref.name );
-
-// const x = {};
-
-// x.foo = 'bar';
-
-// console.log(x); // {foo : 'bar'} // because we are not reassigning the object itself
-
-// x.foo = 'bar2';
-
-// console.log(x);
-
-// x = {foo: 'bar'}; this is reassignment
-
-// Cloning and merging
-
-const main = {
-  name: "John",
-  age: 30
-}
-
-let clone = {};
-
-for(let x in main) {
-  clone[x] = main[x]
-}
-
-console.log(clone)
-clone.name = 'Tarun'
-
-console.log(clone)
-console.log(main)
-
-// Object.assign
-// Object.assign(targetObject, srcObject1, srcObject2, .....) syntax
-
-const assign = {
-}
-
-const assign2 = {
-  color: 'red',
-  mobile: 'Iphone'
-}
-
-const assign3 = {
-  ram: '2GB',
-  rom: '16GB'
-}
-
-Object.assign(assign, assign2, assign3)
-assign.color = 'Blue'
-console.log(assign)
-console.log(assign2)
-
-// if copied object property is there in the target , then its get OverWrittened
-
-// Optional Chaining
-
-// The optional chaining ?. stops the evaluation if the value before ?. is undefined or null and returns undefined.
-
-let key = "firstName";
-
-let user1 = {
-  firstName: "John"
-};
-
-let user2 = null;
-
-alert( user1?.[key] ); // John
-alert( user2?.[key] ); // undefined
+// const [v, ...others2] = [1, 2, 3];
+// console.log(others2); // [2, 3]
 
 </script>
