@@ -1,0 +1,34 @@
+<script>
+  // function car (type, fuelType) {
+  //   this.type = type
+  //   this.fuelType = fuelType
+  // }
+
+  // function setBrand(brand) {
+  //   car.call(this, 'SUV', 'Petrol')
+  //   this.brand = brand
+  // }
+
+  // const newBrand = new setBrand('Ford')
+
+  // console.log(newBrand)
+
+
+  // console.log(arrfn()) // arrow functions are not hoisted
+  // const arrfn = () => {
+  //   console.log('Hello')
+  // }
+
+
+  const obj = {
+    name: 'Tarun',
+    sports: 'Cricket',
+    someMethod: () => {
+      return this
+    }
+  }
+
+  let a = obj.someMethod
+  console.log(a)
+  console.log(obj.someMethod())
+</script>
