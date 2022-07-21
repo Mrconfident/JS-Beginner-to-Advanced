@@ -1,10 +1,18 @@
 
-
+console.log(document)
 let quote = document.querySelector('.quote')
 
 let person = document.querySelector('.person')
 
 let btn = document.querySelector('#new-quote')
+
+// let d = document.getElementById('divA')
+// console.log(d.innerHTML) // difference between innertext, textContent, innerHtml
+
+// const link = document.querySelector('a')
+// console.log(link.getAttribute('href'))
+// link.setAttribute('href', 'https://www.amazon.in/')
+// link.innerText = 'Go to Amzon'
 
 
 const quotesArray = [
