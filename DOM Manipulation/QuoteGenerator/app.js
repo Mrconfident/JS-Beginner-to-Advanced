@@ -1,13 +1,14 @@
 
-console.log(document)
 let quote = document.querySelector('.quote')
+let x = document.querySelectorAll('div')
+console.log(x)
 
 let person = document.querySelector('.person')
 
 let btn = document.querySelector('#new-quote')
 
-// let d = document.getElementById('divA')
-// console.log(d.innerHTML) // difference between innertext, textContent, innerHtml
+let d = document.querySelector('#divA')
+console.log(d.textContent) // difference between innertext, textContent, innerHtml
 
 // const link = document.querySelector('a')
 // console.log(link.getAttribute('href'))

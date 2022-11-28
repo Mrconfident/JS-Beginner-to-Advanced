@@ -1,8 +1,14 @@
 <script>
+
+  console.log(this)
+  console.log(window)
   // function car (type, fuelType) {
   //   this.type = type
   //   this.fuelType = fuelType
+  //   return this
   // }
+
+  // console.log(car)
 
   // function setBrand(brand) {
   //   car.call(this, 'SUV', 'Petrol')
@@ -20,15 +26,15 @@
   // }
 
 
-  const obj = {
-    name: 'Tarun',
-    sports: 'Cricket',
-    someMethod: () => {
-      return this
-    }
-  }
+  // const obj = {
+  //   name: 'Tarun',
+  //   sports: 'Cricket',
+  //   someMethod: () => {
+  //     return this
+  //   }
+  // }
 
-  let a = obj.someMethod
-  console.log(a)
-  console.log(obj.someMethod())
+  // let a = obj.someMethod
+  // console.log(a)
+  // console.log(obj.someMethod())
 </script>

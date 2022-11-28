@@ -1,75 +1,85 @@
 <script>
   // creating an array
 
-  const fruits = ['Mango', 'Guava']
-  const cars = new Array('Ford','tata','Maruti')
-  console.log(cars)
-  console.log(fruits)
+  // const fruits = ['Mango', 'Guava', 1, 2]
+  // const cars = new Array('Ford','tata','Maruti')
+  // console.log(cars)
+  // console.log(fruits)
 
   // Creating String from the Array
-  const var1 = ['Sachin', 'Dhoni']
-  const resultStr = var1.join(', ')
-  console.log(typeof resultStr)
+  // const var1 = ['Sachin', 'Dhoni']
+  // const resultStr = var1.join(', ')
+  // console.log(resultStr)
 
-  // indexOf -> returns the first Index of that element in array
-  // indexOf(searchElement, startSearch)
-  const animals = ['dog', 'cat', 'camel', 'horse', 'dog']
-  const indexOfDog = animals.indexOf('horse',-3)
-  console.log(indexOfDog)
+//   // indexOf -> returns the first Index of that element in array
+//   // indexOf(searchElement, startSearch)
+  // const animals = ['dog', 'cat', 'camel', 'horse', 'dog']
+  // const indexOfDog = animals.indexOf('dog', -5)
+  // console.log(indexOfDog)
 
-  // Check if an array contains a certain item ? 
+//   // Check if an array contains a certain item ? 
 
-  // push and pop in Array (Apppending and deleting from back side)
+// const a = [1,2,3,4,5,6,7]
+// const isPresent = a.indexOf(8)
+// console.log(isPresent)
 
-  fruits.push('Strawberry')
-  animals.push('chickens', 'cats', 'dogs')
-  console.log(fruits)
-  console.log(animals)
+// console.log(a.includes(8))
 
-  fruits.pop()
-  animals.pop() // pops only last element
-  console.log(fruits)
-  console.log(animals)
 
-  // sort
-  const month = ['March', 'Jan', 'Feb', 'Dec'];
-  month.sort();
-  console.log(month); // The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+//   // push and pop in Array (Apppending and deleting from back side)
 
-  // we also have our own comparator function
-  const cmpArray = [10,1,3,2,4,5,8,77,6,9,8]
-  cmpArray.sort((a,b) => {
-    return b-a
-  })
-  console.log(cmpArray);
+  // fruits.push('Strawberry')
+  // animals.push('chickens', 'cats', 'dogs')
+  // console.log(fruits)
+  // console.log(animals)
 
-  // Splice -> removing or replacing existing elements and/or adding new elements
-  // changes done in same array (inplace)
-  // splice(start, deleteCount(opt), item to insert in place of deleted item{opt})
+  // fruits.pop()
+  // animals.pop() // pops only last element
+  // console.log(fruits)
+  // console.log(animals)
 
-  const months = ['Jan', 'Feb', 'Mar', 'Apr']
-  // months.splice(3) // remove all elements starting from index 3
-  // months.splice(-2, 1) //Remove 1 element from index -2
+//   // sort
+  // const month = ['March', 'Jan', 'Feb', 'Dec'];
+  //   month.sort((a, b) => {
+  //     return b-a
+  //   });
+  //   console.log(month); // The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+//   // we also have our own comparator function
+  // const cmpArray = [10,1,3,2,4,5,8,77,6,9,8]
+  // cmpArray.sort((a,b) => {
+  //   return a-b
+  // })
+  // console.log(cmpArray);
+
+//   // Splice -> removing or replacing existing elements and/or adding new elements
+//   // changes done in same array (inplace)
+//   // splice(start, deleteCount(opt), item to insert in place of deleted item{opt})
+
+  // const months = ['Jan', 'Feb', 'Mar', 'Apr']
+  // // months.splice(3) // remove all elements starting from index 3
+  // months.splice(-2, 2, 'May') //Remove 1 element from index -2
   // console.log(months)
 
-  // shift - remove first element from array
-  // return removed ele of array , undefined if array is empty
-  const days = ['Mon', 'Tue', 'wed', 'Thur']
-  console.log(days.shift())
+//   // shift - remove first element from array
+//   // return removed ele of array , undefined if array is empty
+  // const days = ['Mon', 'Tue', 'wed', 'Thur']
+  // console.log(days.shift())
+  // console.log(days)
 
-  // slice(start, end) -> returns a  slicing from start to end(not included)
+//   // slice(start, end) -> returns a  slicing from start to end(not included)
 
-  const countries = ['IND', 'PAK', 'BAN', 'AUS', 'US', 'RUS']
-  const check = countries.slice(0,4)
+  // const countries = ['IND', 'PAK', 'BAN', 'AUS', 'US', 'RUS']
+  // const check = countries.slice(0,4)
 
-  countries[1] = 'JAP'
-  console.log(check)
+  // countries[1] = 'JAP'
+  // console.log(check)
 
-  // unshift method -> method adds one or more elements to the beginning of an array and returns the new length of the array.
+//   // unshift method -> method adds one or more elements to the beginning of an array and returns the new length of the array.
 
-  const sports = ['Cric', 'Hockey', 'Soccer', 'TT', 'BM']
-  console.log(sports.unshift('Ludo', 'Chess'))
-  console.log(sports)
+  // const sports = ['Cric', 'Hockey', 'Soccer', 'TT', 'BM']
+  // console.log(sports.unshift('Ludo', 'Chess'))
+  // console.log(sports)
 
 
   // foreach Loop
@@ -99,46 +109,45 @@
 		value: "#ff0"
 	},
 	{
-		color: "black",
+		color: "yellow",
 		value: "#000"
 	}
 ]
-numArr.forEach(function (element, index, array) {
-  console.log(element)
-})
+// numArr.forEach((element, index, array) => {
+//   console.log(array)
+// })
 
-// concat (merging multiple arrays)
-const array1 = ['a', 'b', 'c'];
-const array2 = ['d', 'e', 'f'];
-const array4 = [1, 2, 3]
-const array3 = array1.concat(array2, array4);
-console.log(array3)
+// // concat (merging multiple arrays)
+// const array1 = ['a', 'b', 'c'];
+// const array2 = ['d', 'e', 'f'];
+// const array4 = [1, 2, 3]
+// const array3 = array1.concat(array2, array4);
+// console.log(array3)
 
-const spreadArr = [1,2,3,4,5,6,7,8]
-const newSpreadArr = Array.from(spreadArr)// spreadArr.slice()// [...spreadArr] // Array.from(spreadArr) || spreadArr.slice() This all makes deep copies of data if the data is not nested.
-console.log(spreadArr)
-console.log(newSpreadArr)
-newSpreadArr[2] = 200
-console.log(spreadArr)
-console.log(newSpreadArr)
+// const spreadArr = [1,2,3,4,5,6,7,8]
+// const newSpreadArr = [...spreadArr] // Array.from(spreadArr) || spreadArr.slice() This all makes deep copies of data if the data is not nested.
+// // console.log(spreadArr)
+// // console.log(newSpreadArr)
+// newSpreadArr[2] = 200
+// console.log(spreadArr)
+// console.log(newSpreadArr)
 
-// filter
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// // filter
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-const result = words.filter(word => word.length > 6);
+// const result = numArr.filter(ele => ele.color === 'yellow');
 
-console.log(result);
+// console.log(result);
 
-// Write a JavaScript function to check whether an `input` is an array or not
+// // Write a JavaScript function to check whether an `input` is an array or not
 
 
-// map 
-// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
-const arry1 = [1, '5z', 9, 16];
+// // map 
+// // The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+// const arry1 = [1, '5z', 9, 16];
 
-// pass a function to map
-const map1 = arry1.map(x => x + '2');
+// // pass a function to map
+// const map1 = arry1.map(x => x + '2');
 
-console.log(map1);
-
+// console.log(map1);
 </script>

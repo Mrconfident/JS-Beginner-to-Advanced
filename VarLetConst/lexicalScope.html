@@ -1,11 +1,19 @@
 <script>
-  function a () {
-    var b = 100
-    c()
-    function c () {
-      console.log(b)
-    }
+  // function a () {
+  //   var b = 100
+  //   c()
+  //   function c () {
+  //     console.log(b)
+  //   }
+  // }
+  // var b = 10
+  // a()
+
+  const str = 'abc?abc'
+  // console.log(str.split('?'))
+  let curr = String.prototype.split
+  String.prototype.split = function (this) {
+    return curr.call(this, '?')
   }
-  var b = 10
-  a()
+  console.log(str.split())
 </script>
