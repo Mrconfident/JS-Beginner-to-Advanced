@@ -1,0 +1,27 @@
+// currying
+
+<script>
+  const buildSandwitch = (ingr1) => {
+    return (ingr2) => {
+      return (ingr3) => {
+        return `${ingr1} + ${ingr2} + ${ingr3} `
+      }
+    }
+  }
+  const res = buildSandwitch('bread')('butter')('veggies')
+  console.log(res)
+
+  const bs = (i1) => (i2) => (i3) => i1 + i2 + i3
+  console.log(bs('bread')('butter')('veggies'))
+
+  const multiply = (x) => (y) => x * y
+  console.log(multiply(2)(3))
+
+  // Partially appllied function common use of currying
+  const timesTwo = multiply(2)
+  console.log(timesTwo(8))
+</script>
+
+// currying is a functional programming technique 
+// that involves breaking down a function that takes multiple arguments into a series of functions 
+// that take one argument each.

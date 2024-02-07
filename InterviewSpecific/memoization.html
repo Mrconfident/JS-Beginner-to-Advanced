@@ -1,0 +1,26 @@
+<script>
+  // const multiplyByTen = (x) => x * 10
+
+  const memoizTen = () => {
+    const multiplyByTen = memoizedMultipleTen()
+    console.log(multiplyByTen(10))
+    console.log(multiplyByTen(10))
+    console.log(multiplyByTen(10))
+    console.log(multiplyByTen(5))
+    console.log(multiplyByTen(5))
+  }
+
+  const memoizedMultipleTen = () => {
+    const cache = {}
+    return (num) => {
+      if (num in cache) {
+        console.log(cache)
+        return cache[num]
+      }
+      const result = num * 10
+      cache[num] = result
+      return result
+    }
+  }
+  memoizTen()
+</script>
