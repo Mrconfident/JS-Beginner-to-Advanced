@@ -1,0 +1,51 @@
+<script>
+// closures
+let x = 1
+const parentFunction = () => {
+  let myValue = 2
+  console.log(x)
+  console.log(myValue)
+  const childFunction = () => {
+    console.log(x += 5)
+    console.log(myValue += 1)
+    return myValue
+  }
+  return childFunction
+}
+
+const result = parentFunction()
+
+result()
+result()
+result()
+
+// IIFE
+
+const privateCounter = (() => {
+  let count = 0
+  console.log(`initial value: ${count}`)
+  return () => {
+    count += 1
+    console.log(count)
+  }
+})()
+privateCounter()
+privateCounter()
+privateCounter()
+
+
+const credits = ((num) => {
+  console.log(`Initial credits: ${num}`)
+  return () => {
+    num -= 1
+    if (num > 0) {
+      console.log(`Playing Game and ${num} credits left`)
+    } else {
+      console.log('Game ended')
+    }
+  }
+})(3)
+credits()
+credits()
+credits()
+</script>

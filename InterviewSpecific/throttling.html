@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn" onclick="newFn()">Click me</button>
+</body>
+<script>
+  const disableBtn = () => {
+    document.querySelector('#btn').disabled = false
+  }
+  const throttle = (fn, delay) => {
+    return (...args) => {
+      document.querySelector('#btn').disabled = true
+      setTimeout(() => {
+        fn(...args)
+      }, delay);
+    }
+  }
+  const newFn = throttle(disableBtn, 1000)
+</script>
+</html>

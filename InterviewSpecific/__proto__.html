@@ -1,0 +1,49 @@
+<script>
+
+  const band = {
+    alive: 'Yes'
+  }
+
+  const musician = {
+    plays: 'True'
+  }
+
+  console.log(musician.plays)
+  console.log(musician.alive)
+  musician.__proto__ = band
+  console.log(musician.alive)
+  Object.setPrototypeOf(musician, band)
+  console.log(musician.alive)
+  console.log(musician.__proto__ === Object.getPrototypeOf(musician))
+
+  const guitarist = {
+    strings: '6',
+    __proto__: musician
+  }
+
+  console.log(guitarist)
+
+  // Object.setPrototypeOf(band, guitarist) // cyclic prototyping is not allowed
+
+  const car = {
+    seats: 'vinyl',
+    doors: 4,
+    get seatsMaterial () {
+      return this.seats
+    },
+    set seatsMaterial (material) {
+      this.seats = material
+    }
+  }
+  console.log(car)
+  const luxuryCar = {}
+  Object.setPrototypeOf(luxuryCar, car)
+  console.log(luxuryCar)
+  luxuryCar.seatsMaterial = 'Leather'
+  console.log(Object.keys(luxuryCar))
+
+  const dummyCar = {}
+  Object.setPrototypeOf(dummyCar, luxuryCar)
+  dummyCar.seatsMaterial = 'Plastic'
+  console.log(Object.keys(dummyCar))
+</script>
