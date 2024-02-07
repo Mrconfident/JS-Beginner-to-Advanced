@@ -1,5 +1,5 @@
 let a = 'Variable'
-alert(a)
+// alert(a)
 
 // declaring multi[ple variables in single line
 let user = 'John ', age = 25, message = ' Hello'
@@ -17,3 +17,9 @@ alert(user+age+message)
 const ourPlanet = 'Earth'
 // now this value can't be reassigned
 // we have to declare and assign a value for const at the same time
+
+
+let x = 10
+let y= '20'
+
+console.log(x + y)

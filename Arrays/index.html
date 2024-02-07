@@ -1,10 +1,10 @@
 <script>
   // creating an array
 
-  // const fruits = ['Mango', 'Guava', 1, 2]
-  // const cars = new Array('Ford','tata','Maruti')
-  // console.log(cars)
-  // console.log(fruits)
+  const fruits = ['Mango', 'Guava', 1, 2]
+  const cars = new Array('Ford','tata','Maruti')
+  console.log(cars)
+  console.log(fruits)
 
   // Creating String from the Array
   // const var1 = ['Sachin', 'Dhoni']
@@ -19,23 +19,23 @@
 
 //   // Check if an array contains a certain item ? 
 
-// const a = [1,2,3,4,5,6,7]
-// const isPresent = a.indexOf(8)
-// console.log(isPresent)
+const a = [1,2,3,4,5,6,7]
+const isPresent = a.indexOf(8)
+console.log(isPresent)
 
-// console.log(a.includes(8))
+console.log(a.includes(8))
 
 
 //   // push and pop in Array (Apppending and deleting from back side)
 
-  // fruits.push('Strawberry')
-  // animals.push('chickens', 'cats', 'dogs')
-  // console.log(fruits)
+  fruits.push('Strawberry')
+  fruits.push('chickens', 'cats', 'dogs')
+  console.log(fruits)
   // console.log(animals)
 
-  // fruits.pop()
+  console.log(fruits.pop())
   // animals.pop() // pops only last element
-  // console.log(fruits)
+  console.log(fruits)
   // console.log(animals)
 
 //   // sort
@@ -56,10 +56,10 @@
 //   // changes done in same array (inplace)
 //   // splice(start, deleteCount(opt), item to insert in place of deleted item{opt})
 
-  // const months = ['Jan', 'Feb', 'Mar', 'Apr']
-  // // months.splice(3) // remove all elements starting from index 3
+  const months = ['Jan', 'Feb', 'Mar', 'Apr']
+  console.log(months.splice(3))// remove all elements starting from index 3
   // months.splice(-2, 2, 'May') //Remove 1 element from index -2
-  // console.log(months)
+  console.log(months)
 
 //   // shift - remove first element from array
 //   // return removed ele of array , undefined if array is empty
@@ -124,13 +124,13 @@
 // const array3 = array1.concat(array2, array4);
 // console.log(array3)
 
-// const spreadArr = [1,2,3,4,5,6,7,8]
-// const newSpreadArr = [...spreadArr] // Array.from(spreadArr) || spreadArr.slice() This all makes deep copies of data if the data is not nested.
-// // console.log(spreadArr)
-// // console.log(newSpreadArr)
-// newSpreadArr[2] = 200
-// console.log(spreadArr)
-// console.log(newSpreadArr)
+const spreadArr = [1,2,3,4,5,6,7,8]
+const newSpreadArr = [...spreadArr] // Array.from(spreadArr) || spreadArr.slice() This all makes deep copies of data if the data is not nested.
+console.log(spreadArr)
+console.log(newSpreadArr)
+newSpreadArr[2] = 200
+console.log(spreadArr)
+console.log(newSpreadArr)
 
 // // filter
 // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];

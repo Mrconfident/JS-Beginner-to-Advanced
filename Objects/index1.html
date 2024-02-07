@@ -1,43 +1,43 @@
 <script>
-  // let user = {
-  //   name: 'tarun',
-  //   email: 't@gmail.com',
-  //   location: 'Bnglr',
-  //   blogs: [1,2,4],
-  //   // login: function () {
-  //   //   console.log('LoggedIn')
-  //   // },
-  //   details: function () {
-  //     console.log(user)
-  //   },
-  //   checkThis: function () {
-  //     console.log(this)
-  //   },
-  //   getName: function () {
-  //     console.log(this.name)
-  //   },
-  //   rollNo: 43
-  // }
-//   user.education = 'Btech'
+  let user = {
+    name: 'tarun',
+    email: 't@gmail.com',
+    education: 'BA',
+    location: 'Bnglr',
+    blogs: [1,2,4],
+    login: function () {
+      console.log('LoggedIn')
+    },
+    details: function () {
+      console.log(user)
+    },
+    checkThis: function () {
+      console.log(this)
+    },
+    getName: function () {
+      console.log(this.name)
+    },
+    rollNo: 43
+  }
+  console.log(user)
+  console.log(user.getName())
+  user.education = 'Btech'
+  console.log(user)
 //   console.log(user)
-//   user.check = function () {
-//     console.log(this)
-//   }
-//   user.check()
-// //   user = {
-// //   login() { // same as "login: function(){...}"
-// //     alert("Hello")
-// //   }
+  user.check = function () {
+    console.log(this)
+  }
+  user.check()
 // // }
 // //   console.log(user)
-// // // user.check = function () {
-// // //   console.log(this)
-// // // }
-// user.rCheck = () => {
-//   console.log(this)
-// }
-// // // user.check()
-// user.rCheck()
+user.check = function () {
+  console.log(this)
+}
+user.rCheck = () => {
+  console.log(this)
+}
+user.check()
+user.rCheck()
 
 // // The value of this is evaluated during the run-time, depending on the context.
 // // };
@@ -48,35 +48,42 @@
 
 
   // shallow copy and deep copy
-//   const car = {
-//     name: 'Ford',
-//     color: 'red',
-//     type: 'SUV',
-//     variant: 1222
-//   }
+  const car = {
+    name: 'Ford',
+    color: 'red',
+    type: 'SUV',
+    variant: 1222
+  }
 
 // //   // delete car.variant
 // console.log(car)
 
-// const vehicle = car  // shallow copy ,not good
-// // console.log(vehicle)
-// //   // console.log(car)
+const vehicle = car  // shallow copy ,not good
+console.log(vehicle)
+  console.log(car)
 
-// // vehicle.name = 'Mustang'
-// //   console.log(vehicle)
-// //   console.log(car)
+vehicle.name = 'Mustang'
+  console.log(vehicle)
+  console.log(car)
 
-// //   // console.log(JSON.stringify(car))
-// const veh = JSON.parse(JSON.stringify(car)) // deep copy
+console.log(JSON.stringify(car))
+const veh = JSON.parse(JSON.stringify(car)) // deep copy
 
-// veh.name = 'Range Rover'
-//   console.log('Veh' ,veh)
-//   console.log('Car', car)
+veh.name = 'Range Rover'
+console.log('Veh' ,veh)
+console.log('Car', car)
 
 
 // //   Write the code, one line for each action:
 
 // // Create an empty object user.
+const u = {}
+u.name = 'John'
+u.surname = 'Smith'
+u.name = 'Pete'
+
+delete u.surname
+console.log(u)
 // // Add the property name with the value John.
 // // Add the property surname with the value Smith.
 // // Change the value of the name to Pete.
@@ -85,16 +92,16 @@
 // //Here the function makeUser returns an object.
 // //What is the result of accessing its ref? Why?
 
-// // function makeUser() {
-// //   return {
-// //     name: "John",
-// //     ref: this
-// //   };
-// // }
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
 
-// // let user11 = makeUser();
+const user11 = makeUser();
 
-// // console.log( user11.ref.name );
+console.log( user11.ref );
 
 // const x = {};
 
@@ -116,33 +123,36 @@ const main = {
   age: 30
 }
 
-// const clone = {};
+const clone = {};
 
-// for(let x in main) {
-//   clone[x] = main[x]
-// }
+for(let x in main) {
+  clone[x] = main[x]
+}
 
-// clone.name = 'Tarun'
+clone.name = 'Tarun'
 
-// console.log(clone)
-// console.log(main)
+console.log(clone)
+console.log(main)
 
 // // Object.assign
-// // Object.assign(targetObject, srcObject1, srcObject2, .....) syntax
+// Object.assign(targetObject, srcObject1, srcObject2, .....) syntax
 
-// const assign = {
-//   color: 'black'
-// }
+const assign = {
+  color: 'black'
+}
 
-// const assign2 = {
-//   color: 'red',
-//   mobile: 'Iphone'
-// }
+const assign2 = {
+  color: 'red',
+  mobile: 'Iphone'
+}
 
-// const assign3 = {
-//   ram: '2GB',
-//   rom: '16GB'
-// }
+const assign3 = {
+  mobile: '2GB',
+  rom: '16GB',
+  color: 'yellow'
+}
+
+console.log(Object.assign(assign, assign2, assign3))
 
 // // if copied object property is there in the target , then its get OverWrittened
 
@@ -165,10 +175,11 @@ console.log( user2?.A);
 // const obj = { };
 // const { a = null } = obj;  // destructing
 // console.log(a)
+const object22 = { a: 1, b: 2, c: 3, d:4}
+const { a, ...others } = object22;
+console.log(a)
+console.log(others)
 
-// const { a, ...others } = { a: 1, b: 2, c: 3, d:4};
-// console.log(a)
-// console.log(others)
 // is equivalent to:
 // const e = obj.a;
 // console.log(e)
@@ -180,7 +191,7 @@ console.log( user2?.A);
 // console.log(obj.b)
 
 // Default Values while Destructuring
-// const [a = 1] = []; // a is 1
+const [x = 1] = []; // a is 1
 // const { b = 2 } = { b: undefined }; // b is 2
 // const { c = 2 } = { c: null }; // c is null
 

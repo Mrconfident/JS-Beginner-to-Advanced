@@ -3,7 +3,7 @@
 
 // Number 
 let num = 8
-console.log(num)
+console.log(typeof num)
 // The number type represents both integer and floating point numbers.
 
 // BigInt
